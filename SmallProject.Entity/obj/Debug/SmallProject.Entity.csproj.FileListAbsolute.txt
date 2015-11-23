@@ -1,0 +1,5 @@
+C:\Users\tekno\Source\Workspaces\Workspace\Small Project V2\SmallTemplateProject\SmallProject.Entity\bin\Debug\SmallProject.Entity.dll
+C:\Users\tekno\Source\Workspaces\Workspace\Small Project V2\SmallTemplateProject\SmallProject.Entity\bin\Debug\SmallProject.Entity.pdb
+C:\Users\tekno\Source\Workspaces\Workspace\Small Project V2\SmallTemplateProject\SmallProject.Entity\obj\Debug\SmallProject.Entity.dll
+C:\Users\tekno\Source\Workspaces\Workspace\Small Project V2\SmallTemplateProject\SmallProject.Entity\obj\Debug\SmallProject.Entity.pdb
+C:\Users\tekno\Source\Workspaces\Workspace\Small Project V2\SmallTemplateProject\SmallProject.Entity\obj\Debug\SmallProject.Entity.csprojResolveAssemblyReference.cache

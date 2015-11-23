@@ -1,0 +1,29 @@
+﻿@using SmallProject.Entity
+@model Authority
+
+
+
+@{
+    bool Durum = false;
+    Authority authority = new Authority();
+    if (Model.SubAuthority!=null)
+    {
+        Durum = true;
+        authority = Model.SubAuthority;
+    }
+}
+@while (Durum)
+{
+    <li><a href="#"><i class="@authority.FaIconCode"></i> @authority.Name</a></li>
+    if (authority.SubAuthority != null)
+    {
+        Durum = true;
+        authority = Model.SubAuthority;
+    }
+    else
+    {
+        Durum = false;
+    }
+
+}
+<li><a href="@Url.Action(Model.ActionName, Model.ControllerName)"><i class="@Model.FaIconCode"></i> @Model.Name</a></li>

@@ -1,0 +1,21 @@
+Proje Adý: Small Template Project
+
+Geliþtiren: Fatih GÜRDAL
+Mail: f.gurdal@hotmail.com.tr, fatihgurdal@fatihgurdal.net
+github: https://github.com/fatihgurdal
+udemy: https://www.udemy.com/user/fatihgrdal/
+Web: http://fatihgurdal.net/
+Blog: http://blog.fatihgurdal.net/
+Blog2: https://fatihgurdal.wordpress.com/
+
+Proje Kapsamý: Bu proje Bilgisayar Öðretmeni olan Junior Web Developer tarafýndan yapýlmýþtýr(Ne kadar yazýlýmcý ararken illede mühendis olsun haal var ama!). 6 aylýk bir .net eðitimden sonra geliþip deðiþen bir devepoler. Bu mimari ufak ve orta dereceli projeler için geliþtirilmiþtir(Sizin ufak ve orta kapsamýnýz nedir bilemem ama neyse). Katmanli mimari kullanýlarak SOLÝD prensiplerine uygun bir proje geliþtirme þansý sunmaktadýr. SOLÝD pirensiplerinden "Ý" (Ýnterface Segregation Principle) harfine tekabul eden interface ler ile çalýþma yoktur. Bunun sebebi ise bazý projelerde farklý sýnýflar arasýnda geçiþlerin olmayacaðý projeler bulunmaktadýr. Ýlerleyen safalarda Ayný projenin castle windsor kullanýlarak bu prensipli versiyonunu çýkartacaðým farklý bir mimari olacak ve ismide fakrlý olarak orta ve büyük projeler için kullanýlmak üzere geliþtirilecektir.
+
+Giriþ bölümüde çok uzadý ama neyse :) Neyse çok konuþtum gel gelelim bu mimari bize neler saðlýyor.
+
+Katmanalarýn Görevleri Neler?
+
+Bir istek geldiðinde iþ akýþý nasýl ilerlemektedir?
+
+Bizleri hangi iþ yüklerinden kurtarmaktadýr?
+
+Evet deðerli geliþtirici arkadaþlarým eðer beðendiyseniz o zmaan kullanalým :) Nasýl kullanacðýnýzdan da kýsaca bahsedelim;

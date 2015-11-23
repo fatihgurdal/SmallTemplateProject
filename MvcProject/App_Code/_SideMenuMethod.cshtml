@@ -1,0 +1,79 @@
+﻿
+@using System.Web.Hosting
+@using SmallProject.Entity
+@helper SideBarHelper(IEnumerable<Authority> listUserAuthoritieses)
+{
+
+    @:<ul class="sidebar-menu" id="side-menu">
+
+    
+
+foreach (var item in listUserAuthoritieses)
+{
+        <li class="treeview">
+
+            @{
+                var subCategories = item.SubAuthoritys;
+                if (subCategories != null && subCategories.Count > 0)
+                {
+                    <a href="#">
+                        <i class="@item.FaIconCode"></i>
+                        <span>@item.Name</span>
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </a>
+
+                    @SideBarSubCategories(subCategories);
+                }
+                else
+                {
+                    if (item.IsLink)
+                    {
+                        <a href="~/@item.ControllerName/@item.ActionName">
+                            <i class="fa fa-dashboard fa-fw"></i>
+                            <span>@item.Name</span>
+                        </a>
+                    }
+                    else
+                    {
+                        <a href="#">
+                            <i class="fa fa-dashboard fa-fw"></i>
+                            <span>@item.Name</span>
+                        </a>
+                    }
+
+                }
+            }
+        </li>
+                }
+                @:</ul>
+
+}
+@helper SideBarSubCategories(IEnumerable<Authority> listAuthoritieses)
+{
+
+    @:<ul class="treeview-menu">
+        foreach (var item in listAuthoritieses)
+{
+
+        <li>
+
+            @{
+                var subCategories = item.SubAuthoritys;
+
+                if (subCategories != null && subCategories.Count > 0)
+                {
+                    <a href="#"><i class="fa fa-dashboard fa-fw" style="visibility: hidden"></i><i class="@item.FaIconCode fa-fw"></i> @item.Name <span class="fa arrow"> </span></a>
+                    @SideBarSubCategories(subCategories)
+                }
+                else
+                {
+
+                    <a href="~/@item.ControllerName/@item.ActionName"><i class="fa fa-dashboard fa-fw" style="visibility: hidden"></i><i class="@item.FaIconCode fa-fw"></i> @item.Name</a>
+
+                
+                }
+            }
+        </li>
+                }
+                @:</ul>
+}

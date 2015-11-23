@@ -1,0 +1,196 @@
+﻿@using SmallProject.Entity
+@{
+    User user = (User)Session["LoginObject"];
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Yönetim | @ViewBag.Title </title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.5 -->
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="~/fonts/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="~/Content/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="~/Content/AdminLTE.min.css">
+    <!-- Grid/MVC library -->
+    <link href="~/Content/Gridmvc.css" rel="stylesheet" />
+    <link href="~/Content/gridmvc.datepicker.min.css" rel="stylesheet" />
+    <!-- For IE 9 and below. ICO should be 32x32 pixels in size -->
+
+    <!--[if IE]><link rel="shortcut icon" href="~/images/logo.ico"><![endif]-->
+    <!-- Touch Icons - iOS and Android 2.1+ 180x180 pixels in size. -->
+    <link rel="apple-touch-icon-precomposed" href="~/images/logo.ico">
+
+    <!-- Firefox, Chrome, Safari, IE 11+ and Opera. 196x196 pixels in size. -->
+    <link rel="icon" href="~/images/logo.ico">
+
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="~/Content/skins/_all-skins.min.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="~/Scripts/html5shiv.min.js"></script>
+        <script src="~/Scripts/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+    <!-- Site wrapper -->
+    <div class="wrapper">
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="@Url.Action("Index","Management")" class="logo">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class="logo-mini"><b>ST</b> P</span>
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg"><img src="~/images/logo.png" class="img-responsive" style="width: 46px; float: left;"><b>Small</b>Template</span>
+            </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top" role="navigation">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                       
+                        <li class="dropdown user user-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <img src="~/images/users/@(user.AvatarFull)" class="user-image" alt="User Image">
+                                <span class="hidden-xs">@(user.FirstName) @(user.LastName)</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!-- User image -->
+                                <li class="user-header">
+                                    <img src="~/images/users/@(user.AvatarFull)" class="img-circle" alt="User Image">
+                                    <p>
+                                        @(user.FirstName) @(user.LastName) - Web Developer
+                                        <small>Kayıt Tarihi: @(user.CreatedDate.ToShortDateString())</small>
+                                    </p>
+                                </li>
+                                <!-- Menu Body -->
+                                <!-- Menu Footer-->
+                                <li class="user-footer">
+                                    <div class="pull-left">
+                                        <a href="@Url.Action("Profile","Management")" class="btn btn-info btn-flat">
+                                            <i class="fa fa-user"></i>
+                                            Profil
+                                        </a>
+                                    </div>
+                                    <div class="pull-right">
+
+                                        <a href="@Url.Action("SignOut","Management")" class="btn btn-danger btn-flat">
+                                            <i class="fa fa-sign-out"></i>
+                                            Çıkış
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- =============================================== -->
+        <!-- Left side column. contains the sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+                <!-- Sidebar user panel -->
+                <div class="user-panel">
+                    <div class="pull-left image">
+                        <img src="~/images/users/@(user.AvatarFull)" class="img-circle" alt="User Image">
+                    </div>
+                    <div class="pull-left info">
+                        <p>@(user.FirstName) @(user.LastName)</p>
+                        <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                    </div>
+                </div>
+                <!-- search form -->
+                <form action="#" method="get" class="sidebar-form">
+                    <div class="input-group">
+                        <input type="text" name="q" class="form-control" placeholder="Arama...">
+                        <span class="input-group-btn">
+                            <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
+                        </span>
+                    </div>
+                </form>
+                <!-- /.search form -->
+                <!-- sidebar menu: : style can be found in sidebar.less -->
+                
+                @Html.Action("GetSideBar","Management")
+            
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+        <!-- =============================================== -->
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            
+            <section class="content-header">
+                @*<h1>
+                    @ViewBag.Title
+                </h1>*@
+                <ol class="breadcrumb">
+                    @{
+                        Html.RenderAction("GetPageInfo", "Management", new { ActionName= ViewContext.Controller.ValueProvider.GetValue("action").RawValue, ControllerName = ViewContext.Controller.ValueProvider.GetValue("controller").RawValue });
+                    }
+                </ol>
+            </section>
+
+            <section class="content" style="margin-top: 20px;">
+                @if (ViewBag.Error != null)
+                {
+                    <script>
+                        alert(@ViewBag.Error);
+                    </script>
+                }
+                
+                @RenderBody()
+            </section>
+
+        @Html.Partial("_SingModal");
+        </div><!-- /.content-wrapper -->
+        <footer class="main-footer">
+            <div class="pull-right hidden-xs">
+                <b>Version</b> 1.0.1
+            </div>
+            <strong>Copyright &copy;  <a href="http://www.fatihgurdal.net">Fatih GÜRDAL</a>.</strong> Tüm Haklara Saklıdır.
+        </footer>
+ 
+        <!-- Add the sidebar's background. This div must be placed
+             immediately after the control sidebar -->
+        <div class="control-sidebar-bg"></div>
+    </div><!-- ./wrapper -->
+    <!-- jQuery 2.1.4 -->
+    <script src="~/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    <!-- jQuery Validation -->
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="~/Scripts/localization/messages_tr.js"></script>
+    <!-- Bootstrap 3.3.5 -->
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <!-- SlimScroll -->
+    <script src="~/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+    <!-- FastClick -->
+    <script src="~/plugins/fastclick/fastclick.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="~/Scripts/app.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="~/Scripts/demo.js"></script>
+    <!-- Grid/MVC Script -->
+    <script src="~/Scripts/gridmvc.min.js"></script>
+    <script src="~/Scripts/bootstrap-datepicker.js"></script>
+    <script src="~/Scripts/gridmvc.lang.tr.js"></script>
+</body>
+</html>

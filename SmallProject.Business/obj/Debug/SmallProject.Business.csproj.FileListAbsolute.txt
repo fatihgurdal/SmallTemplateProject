@@ -1,0 +1,14 @@
+C:\Users\tekno\Source\Workspaces\Workspace\Small Project V2\SmallTemplateProject\SmallProject.Business\bin\Debug\SmallProject.Business.dll.config
+C:\Users\tekno\Source\Workspaces\Workspace\Small Project V2\SmallTemplateProject\SmallProject.Business\bin\Debug\SmallProject.Business.dll
+C:\Users\tekno\Source\Workspaces\Workspace\Small Project V2\SmallTemplateProject\SmallProject.Business\bin\Debug\SmallProject.Business.pdb
+C:\Users\tekno\Source\Workspaces\Workspace\Small Project V2\SmallTemplateProject\SmallProject.Business\bin\Debug\EntityFramework.dll
+C:\Users\tekno\Source\Workspaces\Workspace\Small Project V2\SmallTemplateProject\SmallProject.Business\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\tekno\Source\Workspaces\Workspace\Small Project V2\SmallTemplateProject\SmallProject.Business\bin\Debug\EntityFramework.xml
+C:\Users\tekno\Source\Workspaces\Workspace\Small Project V2\SmallTemplateProject\SmallProject.Business\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\tekno\Source\Workspaces\Workspace\Small Project V2\SmallTemplateProject\SmallProject.Business\obj\Debug\SmallProject.Business.csprojResolveAssemblyReference.cache
+C:\Users\tekno\Source\Workspaces\Workspace\Small Project V2\SmallTemplateProject\SmallProject.Business\obj\Debug\SmallProject.Business.dll
+C:\Users\tekno\Source\Workspaces\Workspace\Small Project V2\SmallTemplateProject\SmallProject.Business\obj\Debug\SmallProject.Business.pdb
+C:\Users\tekno\Source\Workspaces\Workspace\Small Project V2\SmallTemplateProject\SmallProject.Business\bin\Debug\SmallProject.Entity.dll
+C:\Users\tekno\Source\Workspaces\Workspace\Small Project V2\SmallTemplateProject\SmallProject.Business\bin\Debug\SmallProject.Entity.pdb
+C:\Users\tekno\Source\Workspaces\Workspace\Small Project V2\SmallTemplateProject\SmallProject.Business\bin\Debug\SmallProject.Context.dll
+C:\Users\tekno\Source\Workspaces\Workspace\Small Project V2\SmallTemplateProject\SmallProject.Business\bin\Debug\SmallProject.Context.pdb

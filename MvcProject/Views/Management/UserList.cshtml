@@ -1,0 +1,25 @@
+﻿@using GridMvc.Html
+@model IEnumerable<SmallProject.Entity.User>
+@{
+    ViewBag.Title = "UserList";
+    Layout = "~/Views/Shared/_PanelLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-8">
+        <div class="box box-primary">
+            <div class="box-header with-border">
+                <h3 class="box-title">Kullanıcı Oluşturma</h3>
+            </div>
+            @Html.Grid(Model).Columns(col =>
+            {
+                col.Add(x => x.UserName);
+                col.Add(x => x.EMail);
+                col.Add(x => x.FirstName);
+                col.Add(x => x.LastName);
+                col.Add(x => x.CreatedDate);
+            }).WithPaging(10).Filterable(true).Sortable(true).SetLanguage("tr")
+        </div>
+    </div>
+</div>
+

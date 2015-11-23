@@ -1,0 +1,9 @@
+﻿1- MyContex Database nesnemizdir. İçersinde tüm tabloları barındırmaktadır.
+2- Seed Methodu ile DB ilk kez oluşturulduğunda örnek verileri ekler. Bu kısmı lütfen silmeyiniz çünkü başlangıç verileri mutlaka olmalıdır. Sadece düzenelem ve ekleme yapınız. İlk kullanıcı her zaman en üst yetkilidir bir yetki atanmasa dahi o yetkiye sahip olarak kabul edilir. 
+3- SaveChange() methodu ezilmiştir ve hiç bir veri silinemez hale getirilmiştir. 
+	*Silme işlemleri update e çevirilerek IsDeleted alanı True'ya çevrilmektedir. 
+	*Güncellenme işleminde düzenleme tarihi ve düzenleyen son kişi otomatik eklenmektedir.
+	*Ekleme işleminde ise oluşturma tarihi ve düzenleyen son kişi otomaitk eklenmektedir.
+
+
+Son Güncelleme: 25.10.2015

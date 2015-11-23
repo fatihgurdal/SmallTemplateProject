@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "Page403";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>@ViewBag.Title</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.5 -->
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="~/fonts/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="~/Content/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="~/Content/AdminLTE.min.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="~/Scripts/html5shiv.min.js"></script>
+        <script src="~/Scripts/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="hold-transition lockscreen">
+    <section class="content">
+        <div class="error-page">
+            <h2 class="headline text-yellow"> 403</h2>
+            <div class="error-content">
+                <h3><i class="fa fa-warning text-yellow"></i> Oops! Aradık Taradık Bulamadık :(</h3>
+                <p>
+                    Vallahi billahi araya en yetkili kodlarımızı soktuk ama hiç biri Nuh diyor Peygamber demiyor bu sayfayı görüntülemeyi reddediyor. Biz seni en iyisi <a href="@Url.Action("Index","Home")">anasayfaya</a> yönlendirelim oradaki kod arkadaşlar yardımcı olacaktır.
+                </p>
+
+            </div><!-- /.error-content -->
+        </div><!-- /.error-page -->
+    </section>
+    <!-- jQuery 2.1.4 -->
+    <script src="~/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    <!-- Bootstrap 3.3.5 -->
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>
+

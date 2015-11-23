@@ -1,0 +1,7 @@
+﻿1- Filter'ları açmak için Actionların üzerine attribute olarak ekleyiniz. 3 Adet filter vardır.
+	*AuthorizationFilter => Oturum kontrolü yapar eğer oturumu yoksa Login'e yönlendirir. Oturum olup sayfaya yetkisi yoksa sayfa içerğini göndermez.
+2- Şuanlık Entity katmanındaki modelleri yeniden Model klasörüdne oluşturmaya gerek yoktur. Onlardan farklı modelleriniz var ise Models klasörüne ekleyebilirsiniz.
+
+3- Get ve Post Scriptleri Eklenecek !!!!!!!!!!!!!!!!!!!!!!!!
+4-Custom Helper Method Eklenecek (App_Data) !!!!!!!!!!!!!!!!!!!!!!!!
+5- Çalışan bir sistem eklenecek Login ve Admin paneli !!!!!!!!!!!!!!!!!!!!!!!!!!!!!

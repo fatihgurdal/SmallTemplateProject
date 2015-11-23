@@ -1,0 +1,72 @@
+﻿@model SmallProject.Entity.User
+
+@{
+    ViewBag.Title = "Kullanıcı Oluştur";
+    Layout = "~/Views/Shared/_PanelLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-8">
+        <div class="box box-primary">
+            <div class="box-header with-border">
+                <h3 class="box-title">Kullanıcı Oluşturma</h3>
+            </div>
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="box-body">
+                    @Html.ValidationSummary(true, "", new {@class = "text-danger"})
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.UserName, htmlAttributes: new {@class = "control-label"})
+
+                        @Html.EditorFor(model => model.UserName, new {htmlAttributes = new {@class = "form-control"}})
+                        @Html.ValidationMessageFor(model => model.UserName, "", new {@class = "text-danger"})
+
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Password, htmlAttributes: new {@class = "control-label"})
+
+                        @Html.EditorFor(model => model.Password, new {htmlAttributes = new {@class = "form-control"}})
+                        @Html.ValidationMessageFor(model => model.Password, "", new {@class = "text-danger"})
+
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.FirstName, htmlAttributes: new {@class = "control-label"})
+
+                        @Html.EditorFor(model => model.FirstName, new {htmlAttributes = new {@class = "form-control"}})
+                        @Html.ValidationMessageFor(model => model.FirstName, "", new {@class = "text-danger"})
+
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.LastName, htmlAttributes: new {@class = "control-label"})
+
+                        @Html.EditorFor(model => model.LastName, new {htmlAttributes = new {@class = "form-control"}})
+                        @Html.ValidationMessageFor(model => model.LastName, "", new {@class = "text-danger"})
+
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.EMail, htmlAttributes: new {@class = "control-label"})
+
+                        @Html.EditorFor(model => model.EMail, new {htmlAttributes = new {@class = "form-control"}})
+                        @Html.ValidationMessageFor(model => model.EMail, "", new {@class = "text-danger"})
+
+                    </div>
+
+                </div>
+                <div class="box-footer">
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <i class="fa fa-user"> </i> &nbsp;Oluştur
+                    </button>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+
+

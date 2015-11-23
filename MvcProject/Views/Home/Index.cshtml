@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Herkese Açık sayfa</h2>
+
+<script>
+    $.get("@Url.Action("Index","Management")", function (data) {
+        console.log(data);
+        alert(data);
+    });
+</script>

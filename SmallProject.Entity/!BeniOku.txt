@@ -1,0 +1,5 @@
+﻿1- En entity "EntityBase" den miras almalıdır.
+2- Hiç bir entitye Id konulmamalıdır. EntityBase tüm tablolarda olması gereken kolonları barındırmaktadır.
+3- Sadece Log ve ErrorLog tablosu entity baseden miras almaz. Bunun sebebide silinemez, değiştirilmez ve eklenemez bir alandır. Kullanabilmek için LogFilter ve ErrorFilter aktif hale getirilir ve sistem tarafından otomaitk eklenir. Sistem yöneticileri sadece okuma yapabilir ve özel durumlar için silme yapılabilir.
+
+--Son Güncelleme 25.10.2015
