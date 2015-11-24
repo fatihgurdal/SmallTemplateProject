@@ -48,11 +48,32 @@ Giriş bölümüde çok uzadı ama neyse :) Neyse çok konuştum gel gelelim bu 
 Özetle bu katman fasülye katmandır tüm katmanlarda bu referans alınmalıdır.
 
 
-**Bir istek geldiğinde iş akışı nasıl ilerlemektedir?**
+# Bir istek geldiğinde iş akışı nasıl ilerlemektedir?
+1- Çalışan proje MVCProject katmanıdır. İsteklr bu katmandan yollanır ve kullanıcılarımız bu katmanda işlemler yapmaktadır.
+2- MVC katmanına gelen istek iş katmanına(SmallProject.Business) gönderilir burada ilgili method yada methodlar çalışır
+3-Database işlemi için Veritabanı katmanı (SmallProject.Context) gönderilir bu katman kodlar düzenleme işlem yapma kodları ile uğraşmaz direk SQL kodları alır ve DB de gerekli işlemleri yapar. İstediği verileri iş katmanına yollar. 
+4-İş katmanı aldığı veriler ile gerekli işlemlerini yaptıktan sonra MVC katmanına yollar.
+5- MVC katmanına kullanıcıya gösterilmesi gereken HTML kodlarını yansıtır.
+Özetlersek Kullanıcı>MVC>Business>Context>Business>MVC>Kullanıcı 
 
-**Bizleri hangi iş yüklerinden kurtarmaktadır?**
+# Bizleri hangi iş yüklerinden kurtarmaktadır?
+1- Katmanlara bölme
+2- Otomatik verinlerin değişimleri, eklenmelerinin takibi,
+3- Her tabloya eklenen kolanları sistematik hale getirme
+5- Her sayfada html elementlerin label larını yazmaktan kurtarıyor ve her sayfa için değil bir nesneye 1 kez label'ı ne oalcağı belirtiliyor.
+6- Otomatik Jquery Validation
+7- Hazır Get & Post Methodları
+8- Dinamik Menü
+9- Dinamik Oturum kontrolü
+10- Hata yönetimi
+11- Kullanıcıların gezinli loglaması
+12- Hali hazırda Yönetim paneli şablonunun düzenlenip hazırlanan Layout(webforms da masterpage olarak bilinir)
+13-Responsive bir yönetim paneli
+14- Geniş widget ve icon setleri
+15- Sayfalama, filtreleme ve sıralaması olan bir Grid Framework'ü yüklenmiş ve örnek kullanımı
 
-**Evet değerli geliştirici arkadaşlarım eğer beğendiyseniz o zaman kullanalım :) Nasıl kullanacğınızdan da kısaca bahsedelim;**
+
+**Evet değerli geliştirici arkadaşlarım eğer beğendiyseniz o zaman kullanalım :) Nasıl kullanacağınızdan da kısaca bahsedelim;**
 
 Şimdi MVC katmanındaki Connection String'i değiştiriyorsunuz sonra F5 e basıyorsunuz... Bitti bu kadar :))) Her şey içersinde hazırdır tüm methodların açıklama satırları ve katmanları ne işe yaradığı belirtilmektedir. Tek yapmanız gereken Bu methodları kullanarak kendi projenize has sayfaları tasarlamaktır.
 
