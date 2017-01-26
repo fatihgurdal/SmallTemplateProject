@@ -33,7 +33,7 @@ namespace SmallProject.Context
                 this.ChangeTracker.Entries().Where(
                 x =>
                     x.State == EntityState.Added ||
-                    x.State == EntityState.Modified).ToList();
+                    x.State == EntityState.Modified || x.State== EntityState.Deleted).ToList();
 
             dbEntityEntries.ForEach(dbEntityEntry =>
             {
